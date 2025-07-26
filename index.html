@@ -650,12 +650,12 @@
         <div class="header-content">
             <a href="#" class="logo">
                 <div class="logo-icon">🌱</div>
-                <span class="logo-text">Kleingartenverein "Goldene Aue" e.V.</span>
+                <span class="logo-text">DEMO Kleingartenverein "Goldene Aue" e.V.</span>
             </a>
             <nav class="nav">
                 <a href="index.html" class="active">Start</a>
-                <a href="privacy.html">Datenschutz</a>
-                <a href="legal.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+                <a href="impressum.html">Impressum</a>
             </nav>
             <button class="mobile-menu-toggle">☰</button>
         </div>
@@ -664,7 +664,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background">
-            <img src="/placeholder.svg?height=800&width=1400" alt="Green Haven Allotments Garden" />
+            <img src="./garden.jpg?height=800&width=1400" alt="Green Haven Allotments Garden" />
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -909,6 +909,28 @@
                 button.addEventListener('click', function() {
                     alert('Thank you for your interest! Please contact us at info@greenhaven-allotments.com');
                 });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.querySelector('.mobile-menu-toggle');
+            const navMenu = document.querySelector('.nav');
+
+            toggleButton.addEventListener('click', function () {
+                if (navMenu.style.display === 'flex') {
+                    navMenu.style.display = 'none';
+                } else {
+                    navMenu.style.display = 'flex';
+                    navMenu.style.flexDirection = 'column';
+                    navMenu.style.position = 'absolute';
+                    navMenu.style.top = '70px';
+                    navMenu.style.right = '20px';
+                    navMenu.style.background = 'white';
+                    navMenu.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.1)';
+                    navMenu.style.padding = '10px 20px';
+                    navMenu.style.borderRadius = '10px';
+                    navMenu.style.zIndex = '1001';
+                }
             });
         });
     </script>
